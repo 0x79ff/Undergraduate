@@ -1,0 +1,43 @@
+DATA    SEGMENT
+A   DB      70H
+B   DB      60H
+C   DB      40H
+D   DB      20H
+S   DW      ?
+DATA    ENDS
+CODE    SEGMENT
+	ASSUME  CS:CODE,DS:DATA   
+START:  MOV     AX, DATA
+	MOV DS, AX  ;下面计算S=(A*B)/(C-D)+5(A-B)/2+C/D
+	MOV AL,A    ;先计算(A*B)/(C-D)
+	MOV BL,B        
+	IMUL BL
+	MOV BX,AX
+	MOV AL,C
+	SUB AL,D
+	CBW
+	MOV CX,AX
+	MOV AX,BX
+	CWD
+	IDIV CX
+	MOV BX,AX   ;结果存到BX中
+	MOV AL,A    ;再计算5(A-B)/2,结果和BX相加
+	SUB AL,B
+	MOV CL,5
+	MOV CH,2
+	IMUL CL
+	CWD
+	IDIV CH
+	ADD AX,BX
+	MOV BX,AX   ;前两项的和存到BX中
+	MOV AL,C    ;最后计算C/D
+	MOV CL,D
+	CBW
+	IDIV CL
+	CBW
+	ADD AX,BX
+	MOV S,AX          
+	MOV AX, 4C00H
+	INT     21H
+CODE    ENDS
+	END START
