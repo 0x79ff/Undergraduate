@@ -1,2 +1,1 @@
-# Undergraduate
-Hello! I'm yff.
+本人在同济本科cs在读期间的一些作业，仅供参考，切勿抄袭！
