@@ -1,0 +1,22 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/connect.png</file>
+        <file>icon/station.png</file>
+        <file>icon/subway.png</file>
+        <file>icon/add.png</file>
+        <file>icon/all.png</file>
+        <file>icon/text.png</file>
+        <file>icon/map.png</file>
+        <file>icon/metro-shanghai.png</file>
+        <file>icon/splash.png</file>
+        <file>icon/help.png</file>
+    </qresource>
+    <qresource prefix="/data">
+        <file>data/SubwayInfo.txt</file>
+        <file>data/DemoInput.txt</file>
+    </qresource>
+    <qresource prefix="/html">
+        <file>html/DynamicAddition.html</file>
+        <file>html/ViewAndQuery.html</file>
+    </qresource>
+</RCC>

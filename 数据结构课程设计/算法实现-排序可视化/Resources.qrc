@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/fontsrc">
+        <file>font/hgwt.ttf</file>
+        <file>font/hgxk.ttf</file>
+        <file>font/hgy3.ttf</file>
+    </qresource>
+    <qresource prefix="/stylesrc">
+        <file>style.qss</file>
+    </qresource>
+    <qresource prefix="/iconsrc">
+        <file>icon.ico</file>
+        <file>splash.png</file>
+    </qresource>
+</RCC>
